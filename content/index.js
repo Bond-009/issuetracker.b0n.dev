@@ -55,4 +55,12 @@ fetch(`data.json`)
                 ['Closed PRs', ...d.map(x => x["closedPRs"])]
             ],
             "green");
+
+        generateChart(
+            "#mergedPRsChart",
+            [
+                dateColumn,
+                ['Merged PRs', ...d.map(x => x["mergedPRs"])]
+            ],
+            "purple");
     });

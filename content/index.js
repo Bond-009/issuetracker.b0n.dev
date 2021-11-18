@@ -10,7 +10,19 @@ function generateChart(bindto, columns, color) {
                 type: 'timeseries',
                 tick: {
                     format: '%Y-%m-%d'
-                }
+                },
+                padding: { left: 0 }
+            },
+            y: {
+                tick: {
+                    format: function (e) {
+                        if (Math.floor(e) != e || e < 0) {
+                            return;
+                        }
+                        return e;
+                    }
+                },
+                padding: { bottom: 0 }
             }
         },
         color: {

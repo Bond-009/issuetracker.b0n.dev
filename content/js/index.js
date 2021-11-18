@@ -1,6 +1,19 @@
+const darkmodeSwitch = document.getElementById("darkmodeSwitch");
+const darkmode = document.getElementById("darkmode");
+
+darkmodeSwitch.addEventListener('click', () => {
+    darkmode.disabled = !darkmode.disabled;
+});
+
 function generateChart(bindto, columns, color) {
     c3.generate({
         bindto: bindto,
+        point: {
+            r: 4
+        },
+        legend: {
+            position: 'bottom'
+        },
         data: {
             x: 'x',
             columns: columns
@@ -50,7 +63,7 @@ fetch(`data.json`)
                 dateColumn,
                 ['Closed Issues', ...d.map(x => x["closedIssues"])]
             ],
-            "blue");
+            "orange");
 
         generateChart(
             "#openPRsChart",
@@ -58,7 +71,7 @@ fetch(`data.json`)
                 dateColumn,
                 ['Open PRs', ...d.map(x => x["openPRs"])]
             ],
-            "orange");
+            "lightblue");
 
         generateChart(
             "#closedPRsChart",

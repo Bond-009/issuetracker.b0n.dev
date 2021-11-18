@@ -1,15 +1,19 @@
 body{
-    background-color: #1e1e1e;
-    color: #eeeeee;
+	background-color: #1e1e1e;
+	color: #eeeeee;
 }
+#darkmodeSwitch {
+	color: white;
+}
+
 .c3-axis path, .c3-axis line {
-    stroke: #eeeeee;
+	stroke: #eeeeee;
 }
 .c3-legend-item {
-    fill: #eeeeee;
+	fill: #eeeeee;
 }
 .c3-axis .tick {
-    fill: #eeeeee;
+	fill: #eeeeee;
 }
 .c3-tooltip th, .c3-tooltip td {
 	color: #eeeeee;
@@ -17,9 +21,5 @@ body{
 }
 .c3-legend-background {
 	fill: #1e1e1e;
-    stroke-width: 0;
-}
-
-#darkmodeSwitch {
-	color: white;
+	stroke-width: 0;
 }

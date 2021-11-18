@@ -22,7 +22,7 @@ function generateChart(bindto, columns, color) {
 fetch(`data.json`)
     .then(res => res.json())
     .then(d => {
-        var dateColumn = ['x'].concat(d.map(x => x["date"]));
+        var dateColumn = ['x', ...d.map(x => x["date"])];
 
         generateChart(
             "#openIssuesChart",
